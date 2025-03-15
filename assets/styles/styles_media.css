@@ -15,81 +15,49 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 5%;
     padding-top: 1%;
+    border-top: solid; border-width: thin;
 }
 .section-col {
     display: flex;
     flex-direction: column;
-}
-.sub-section-row {
-    display: flex;
-    flex-direction: row;
+    margin-top: 5%;
 }
 .sub-section-col {
     display: flex;
     flex-direction: column;
 }
-.section-header {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    background: plum;
-}
 .left-panel {
-    display: flex;
-    flex-direction: column;
     width: 30%;
-    padding-right: 1%;
     border-right: solid; border-width: thin;
 }
 .right-panel {
-    display: flex;
-    flex-direction: column;
     width: 65%;
+    /*border-top: solid; border-width: thin;*/
 }
 
 /* GLOBAL ATTRIBUTES for Fine Tuning */
-.mt-0 {margin-top: 0;}
-.mt-2 {margin-top: 2%;}
-.mt-4 {margin-top: 4%;}
-.ml-0 {margin-left: 0;}
-.ml-2 {margin-left: 2%;}
-.mb-0 {margin-bottom: 0;}
-.mb-3 {margin-bottom: 3%;}
-
-.p-0 {padding: 0;}
-
-.jc-se {justify-content: space-evenly;}
-.g-10 {gap: 10%;}
-
+.ml-0 {margin-left: 0};
 .purple {color: purple;}
 
 
 /* Hide Mobile Header Menu until pixel size reached */
 .mobile-section {display: none;}
 
-
 /* NAVIGATION SECTION */
+
 .navigation-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2%;
 }
-.navigation-logo-section {
-    width: 20%;
-    font-family: "Playfair Display", serif;
-    font-size: larger;
-    font-style: italic;
-    margin: 0 1% 1% 0;
-    color: plum
-}
 .navigation-sub-section {
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-    width: 60%;
+    width: 30%;
     height: fit-content;
 }
 /* Navigation Links */
@@ -112,40 +80,42 @@ body {
 
 /* HERO SECTION */
 
-.hero-text-panel-1 {display: contents;}
-
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 1% 5% 0 5%;
-}
-.hero-sub-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    /*border: solid; color: black; border-width: thin;*/
 }
 /* Hero Left Panel */
-.hero-left-panel {
+.hero-sub-section-1 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 45%;
 }
 /* Hero Right Panel */
-.hero-right-panel {
+.hero-sub-section-2 {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 45%;
-    padding: 0 2% 2% 2%;
+    padding: 2%;
 }
 .image-hero {
     align-items: center;
     width: 50%;
     margin: 2%;
+}
+.logo-section {
+    height: 20%;
+    font-family: "Playfair Display", serif;
+    font-size: larger;
+    font-style: italic;
+    margin: 0 1% 1% 1%;
+    padding: 0 1% 1% 1%;
+    color: plum
 }
 /* Triangle shape on landing page */
 .abstract-shape {
@@ -154,7 +124,7 @@ body {
     height: 85%;
     top: 10%;
     left: 0;
-    background: #f5b9e8;
+    background: plum;
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     z-index: -1;
 }
@@ -163,12 +133,11 @@ body {
 /* PAGE SECTIONS */
 
 /* Hide all sections until scroll into view */
-.intro {opacity: 0; margin: 5%;}
-.resume {opacity: 0; margin: 5%;}
-.projects {opacity: 0; margin: 5%;}
-.contact {opacity: 0; margin: 5%;}
-.footer {opacity: 0; margin: 5%;}
-
+.intro {opacity: 0;}
+.resume {opacity: 0;}
+.projects {opacity: 0;}
+.contact {opacity: 0;}
+.footer {opacity: 0;}
 
 
 /* Animation */
@@ -199,7 +168,7 @@ body {
 form {
     margin: 2%;
     padding: 2%;
-    background: pl;
+    background: lightgrey;
     border-radius: 10px;
 }
 input[type=text], textarea {
@@ -232,7 +201,6 @@ input[type=text], textarea {
 .legal-contents {
     background-color: #fefefe;
     margin: 0 auto 15% auto; /* 0% from the top, 15% from the bottom and centered */
-    padding: 2%;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -252,26 +220,19 @@ input[type=text], textarea {
 }
 
 /* Footer Section */
-.footer-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background: plum;
-}
 .footer-sub-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20%;
     padding-top: 1%;
+    border-top: solid; color: black; border-width: thin;
 }
 
 .footer-panel {
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 8%;
 }
 
 
@@ -283,28 +244,33 @@ h1 {
     font-size: 400%;
     font-style: italic;
     width: 80%;
+    margin-left: 2%;
 }
 h2 {
     font-family: "Playfair Display", serif;
-    font-size: 300%;
+    font-size: 250%;
+    margin: 0 0 10% 0 ;
 }
 h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 250%;
+    font-size: 200%;
+    margin-top: 0;
+    padding: 0 0 0 2%;
 }
 h4 {
-    font-size: 225%;
-}
-h5 {
     font-size: 150%;
+    margin-top: 1%;
+    padding: 0 0 0 2%;    
 }
+
 p {
     font-size: large;
-    margin-bottom: 1%;
+    margin: 2%;
+    padding: 0;
 }
 .p-bold {
     font-weight: bold;
     width: 100%;
+    margin-left: 0;
 }
 .p-med {font-size: medium;}
 
@@ -315,11 +281,11 @@ p {
     padding: 0;
 }
 .button {
-    font-size: medium;
     font-weight: bold;
     width: fit-content;
     margin-top: 5%;
-    padding: 2%;
+    padding: 3%;
+    text-decoration: none;
     border-radius: 10px;
     background-color: white;
     border: solid; color: purple; border-width: thin;
@@ -329,24 +295,6 @@ p {
     background-color: purple;
     color: white;
 }
-.button {
-    text-decoration: none;
-}
-.button:hover {
-    text-decoration: none;
-    color: white;
-}
-/*.button {
-    font-weight: bold;
-    width: fit-content;
-    margin-top: 5%;
-    padding: 2%;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: white;
-    border: solid; color: purple; border-width: thin;
-    cursor: pointer;
-}*/
 .nav-link {
     width: auto;
     padding: 2% 2% 2% 0;
@@ -390,13 +338,10 @@ p {
 /* Images and Social Media */
 .image {
     width: 65%;
+    padding-left: 2%;
 }
 
 .social-icons {width: 30px;}
-.arrow-icon {width: 50px;}
-.contact-icon {width: 70px; margin-bottom: 10%;}
-
-.hero-text-panel-2 {display: none;}
 
 /* Hide Mobile Footer Menu until pixel size reached */
 .mobile-footer-section {display: none;}
@@ -405,218 +350,221 @@ p {
 /* DEVICE STYLING */
 /* ============== */
 
-
-
 /* Additonal Styling for Large Tablets */
 
-/* 977px to 1200px: Large Tablets and Small Laptops */
-/* 769px to 976px: Tablets and Extra Large Smartphones */
-/* 577px to 768px: Large Smartphones */
-/* 481px to 576px: Small Smartphones */
-/* 480px minus: Mobiles */
+/* 976px    Increase main image size */
+@media (max-width: 976px) {.image-hero {width: 75%;}}
 
+/* 876px    Reduce h2 and below.
+            Increase main image size */
+@media (max-width: 876px) {
 
-/* 977px to 1024px: Large Tablets and Small Laptops */
-/* Increase main image size */
-@media (max-width: 1200px) {
+    h2 {font-size: 200%;}
+    h3 {font-size: 175%;}
+    h4 {font-size: 125%;}
+    
+}
+    
+/* Additonal Styling for Small Large Tablets and Large Smartphoness*/
+/* 768px    Reduce h1 */
+@media (max-width: 768px) {
 
-    .hero-text-panel-1 {display: none;}
-    .hero-text-panel-2 {display: contents;}
+    h1 {font-size: 300%;}
+    .image-hero {width: 85%;}
+
+}        
+
+/* Additonal Styling for Smartphones and Mobiles */
+/* 576px    Single Column */
+@media (max-width: 576px) {
+
+    .image-hero {width: 50%;}
+    .image {width: 98%;}
 
     .hero-section {
         display: flex;
         flex-direction: column;
-        height: 100%;
-        margin: 1% 5% 0 5%;
+        height: auto;
     }
-    /* Hero Left Panel */
-    .hero-left-panel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 45%;
-    }
+    .hero-sub-section-1 {width: auto;}
+    .hero-sub-section-2 {width: auto;}
 
-    .image-hero {width: 65%;}
-}
-
-/* 769 to 976px: Tablets and Extra Large Smartphones */
-/* Increase main image size */
-/* Reduce Header Sizes */
-@media (max-width: 976px) {
-    
-    .image-hero {width: 75%;}
-
-    h1 {font-size: 300%;}
-    h2 {font-size: 250%;}
-    h3 {font-size: 200%;}
-    h4 {font-size: 175%;}
-    h5 {font-size: 125%;}
- 
-}
-
-/* 577 to 768px: Larger Smartphones */
-@media (max-width: 768px) {
-
-    .navigation-section {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin-top: 2%;
-    }
-    .navigation-sub-section {
-        display: flex;
-        justify-content: flex-end;
-        gap: 8px;
-        width: 80%;
-        height: fit-content;
-    }
-    .nav-header-link {
-        width: 80%;
-    }
-    .nav-header-link:hover {
-        width: 80%;
-    }
-    
-    .image-hero {width: 90%;}
-    h1 {font-size: 250%;}
-    h2 {font-size: 200%;}
-    h3 {font-size: 150%;}
-    h4 {font-size: 125%;}
-    h5 {font-size: 100%;}
- 
-}
-
-/* 481 to 576px: Smartphones */
-@media (max-width: 576px) {
-
-    .navigation-section {
-        position: fixed;
-        width: 90%;
-        margin: 0;
-        padding: 1%;
-        top: 0;
-        border: solid; color: black; border-width: thin;
-        border-radius: 10px;
-        background: white;
-        z-index: 2;
-    }
-    .navigation-sub-section {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 8px;
-        width: auto;
-    }
-    /* Navigation Links */
-    .nav-header-link {
-        padding: 2%;
-        text-decoration: none;
-        color: black;
-        border: none;
-        background: none;
-    }
-    .nav-header-link:hover {
-        padding: 2%;
-        text-decoration: none;
-        color: white;
-        border: none;
-        background: plum;
-    }
-        
-    .button-left-panel {display: none;}
-
+    /* Turn ALL flex rows into columns */
     .section-row {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: auto;
+        margin-top: 5%;
         padding-top: 1%;
-    }
-    .hero-section {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin-top: 25%;
-    }
-    .hero-sub-section {
-        display: flex;
-        flex-direction: column;
-    }
-    .hero-left-panel {
-        width: 90%;
-    }
-    .image-hero {width: 90%;}
-
-    .hero-right-panel {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        padding: 0;
-    }
-
-    .section-header {
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 2%;
+        border-top: solid; border-width: thin;
     }
     .left-panel {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        padding-right: 1%;
-        border: none;
-    }        
-    .right-panel {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    h1 {
-        font-size: 200%;
         width: 98%;
+        border: none;
     }
-    h2 {font-size: 150%;}
-    h3 {font-size: 125%;}
-    h4 {font-size: 100%;}
+    .right-panel {
+        width: 98%;
+        margin-top: 5%;
+        border: none;
+    }
 
-    /*.hero-text-panel-1 {display: none;}
-    .hero-text-panel-2 {display: contents;}
-
-    .hero-section {
+    /* Mobile HEADER Menu*/
+    .mobile-section {
+        display: contents;
+        flex-direction: row;
+        width: 98%;
+        margin: 2%;
+        height: 500px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+    .mobile-logo-section {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        width: 50%;
+        padding: 1%;
+        color: plum;
+    }
+    .mobile {
         display: flex;
-        flex-direction: column;
         width: auto;
+        position: relative;
+        margin-bottom: 2%;
     }
+    /* Dropdown Links */
+    .mobile-button {
+        text-align: left;
+        font-size: medium;
+        width: 60%;
+        padding: 0 4px;
+        color: black;
+        text-decoration: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .mobile-button:hover {
+        background-color: plum;
+        color: black;
+    }
+    /* Legal Section buttons for both Header and Footer Mobile Menu*/
+    /* These are formatted differently to the other links since they */
+    /* activate a javascript modal */
+    .mobile-legal-button {
+        text-align: left;
+        font-size: medium;
+        width: 60%;
+        margin: 0 0 0 0;
+        padding: 5% 12% 5% 8%;
+        color: black;
+        text-decoration: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .mobile-legal-button:hover {
+        background-color: plum;
+        color: black;
+    }
+    /* Move the close modal button to the left */
+    .close-legal {left: 25px;}
     
-    .hero-left-panel {width: 80%;}
-    .hero-right-panel {width: 95%;}
-*/        
+    #mobile-links {
+        display: none;
+        width: 60%
+    }
+
+    /* Mobile Hamburger Icon */
+    .mobile a {
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .mobile a.icon {
+        background: black;
+        color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 5%;
+    }
+
+    /* Hide the main header navigation section */
+    .navigation-section {display: none;}
+
+    
+    /* Mobile FOOTER Menu*/
+    .mobile-footer-section {
+        display: contents;
+        flex-direction: row;
+        width: 98%;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+    .mobile-footer-logo-section {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        width: 50%;
+        padding: 1%;
+        color: plum;
+    }
+    .mobile-footer {
+        position: relative;
+        display: flex;
+        width: auto;
+        margin: 3% 0 3% 0;
+        border-top: solid; color: black; border-width: thin;
+    }
+    /* Dropdown Links */
+    .mobile-button {
+        font-size: medium;
+        padding: 0 4px;
+        color: black;
+        text-decoration: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .mobile-button:hover {
+        background-color: plum;
+        color: black;
+    }
+    #mobile-footer-links {
+        display: none;
+        width: 60%;
+    }
+
+    /* Mobile Hamburger Icon */
+    .mobile-footer a {
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .mobile-footer a.icon {
+        background: black;
+        color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 5%;
+    }
+    .mobile-footer-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5%;
+        margin-bottom: 3%;
+        color: black;
+        border-bottom: solid; color: black; border-width: thin;
+    }
+
+    /* Hide the main footer navigation section */
+    .footer {display: none;}
 
 }
-
