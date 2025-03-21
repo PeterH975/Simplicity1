@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Simplicity</title>
+    <title>Simplicity V5</title>
 
     <link rel="stylesheet" href="assets/styles/styles.css">
 
@@ -16,55 +16,57 @@
     <!-- Awesome Fonts Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- JQuery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
 </head>
 <body>
 
+
     <!-- NAVIGATION SECTION ----------------------------------------->
     <!-- Displayed when screen size is 577px and above -->
+    <!-- Hidden below screen size 577px -->
 
     <div class="navigation-section">
 
-        <div class="navigation-logo-section">Simplicity</div>
+        <a href="#" class="navigation-logo-section" onclick="displayHome()">Simplicity</a>
 
         <div class="navigation-sub-section">
 
-            <a href="#intro" class="nav-header-link">Introduction</a>
-            <a href="#resume" class="nav-header-link">Resume</a>
-            <a href="#projects" class="nav-header-link">My Projects</a>
-            <a href="#contact" class="nav-header-link">Contact Me</a>
+            <a href="#" class="nav-header-link" onclick="displayHome()">Home</a>
+            <a href="#" class="nav-header-link" onclick="displayIntroduction()">Introduction</a>
+            <a href="#" class="nav-header-link" onclick="displayResume()">Resume</a>
+            <a href="#" class="nav-header-link" onclick="displayProject()">My Projects</a>
+            <a href="#" class="nav-header-link" onclick="displayContact()">Contact Me</a>
 
         </div>
 
     </div>
 
 
-
-    <!-- MOBILE "HEADER" NAVIGATION MENU ---------------------------->
+    <!-- HAMBURGER "HEADER" NAVIGATION MENU ---------------------------->
     <!-- Displayed at screen size 576px or below -->
-     
+    <!-- Hidden above screen size 576px -->
     <div class="mobile-section">
 
         <div class="mobile">
 
             <div class="mobile-logo-section">
-                <h4>Simplicity</h4>
+                <a href="#" onclick="displayHome(), closeMobileMenu()"><h4>Simplicity</h4></a>
             </div>
 
              <div id="mobile-links">
 
-                <button class="mobile-button"><a href="#intro" onclick="closeMobileMenu()">Introduction</a></button><br>
-                <button class="mobile-button"><a href="#resume" onclick="closeMobileMenu()">Resume</a></button><br>
-                <button class="mobile-button"><a href="#projects" onclick="closeMobileMenu()">My Projects</a></button><br>
-                <button class="mobile-button"><a href="#contact" onclick="closeMobileMenu()">Contact Me</a></button><br>
-                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('privacy').style.display='block'">Privacy Policy</button><br>
-                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('terms').style.display='block'">Terms of Use</button>
+                <button class="mobile-button"><a href="#" onclick="displayHome(), closeMobileMenu()">Home</a></button><br>
+                <button class="mobile-button"><a href="#" onclick="displayIntroduction(), closeMobileMenu()"">Introduction</a></button><br>
+                <button class="mobile-button"><a href="#" onclick="displayResume(), closeMobileMenu()"">Resume</a></button><br>
+                <button class="mobile-button"><a href="#" onclick="displayProject(), closeMobileMenu()"">My Projects</a></button><br>
+                <button class="mobile-button"><a href="#" onclick="displayContact(), closeMobileMenu()"">Contact Me</a></button><br>
+                <!-- Button Links for Modal Pop-Ups -->
+                <button class="mobile-legal-button" onclick="displayPrivacy(), closeMobileMenu()">Privacy Policy</button>
+                <button class="mobile-legal-button" onclick="displayTerms(), closeMobileMenu()">Terms of Use</button>
+
+
             </div>
 
-            <a href="javascript:void(0);" class="icon" onclick="activateHeaderMenu()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="displayHeaderMenu()"><li class="fa fa-bars"></li></a>
 
         </div>
         
@@ -74,364 +76,170 @@
     <!-- End of Mobile Header Menu-->
 
 
-    
-    <!-- HERO SECTION ----------------------------------------------->
+    <!--
+    =================================================================================
+    HERO SECTIONS
+    =================================================================================
+    -->
 
     <div class="hero-section">
 
         <div class="hero-sub-section">
 
+            <!-- COMMON HERO SUB-SECTION TO ALL PAGES -->
             <!-- Left section containing main image -->
             <div class="hero-left-panel">
-                <img src="assets/images/ai-generated-9147768_1280.png" class="image-hero">
+                <img src="assets/images/ai-generated-9147768_300.webp" class="image-hero">
             </div>
 
 
-            <!-- Right section containing main text -->
-            <div class="hero-right-panel">
-
-                <h1>Looking at the World in a Simple Way</h1>
-
-                <div class="hero-text-panel-1">
-                    <p>Hi, my name is Marlene Chan. I am a freelance <b>UI and UX Web Designer</b> based in London.</p>
-                    <p>I have worked with the following companies:</p>
-                    <p>Company 1, Company 2, Company 3 and many more...</p>
-
-                    <div class="sub-section-row g-10">
-                        <h5 class="purple">SCROLL TO VIEW MORE</h5>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                    </div>
-                </div>
-
+            <!-- HOME PAGE HERO Right section containing Main header and text -->
+            <div id="home-hero" class="home-hero-panel hero-right-panel">
+                <div home-hero-include-html="include/home_hero.html"></div>
             </div>
 
+            <!-- INTRODUCTION HERO Right section containing main text -->
+            <div id="intro-hero" class="introduction-hero-panel hero-right-panel">
+                <div introduction-hero-include-html="include/introduction_hero.html"></div>
+            </div>
+
+            <!-- RESUME HERO Right section containing main text -->
+            <div id="resume-hero" class="resume-hero-panel hero-right-panel">
+                <div resume-hero-include-html="include/resume_hero.html"></div>
+            </div>
+
+            <!-- PROJECT HERO Right section containing main text -->
+            <div id="project-hero" class="project-hero-panel hero-right-panel">
+                <div project-hero-include-html="include/project_hero.html"></div>
+            </div>
+
+            <!-- CONTACT HERO Right section containing main text -->
+            <div id="contact-hero" class="contact-hero-panel hero-right-panel">
+                <div contact-hero-include-html="include/contact_hero.html"></div>
+            </div>
+
+            <!-- Shape Styling for all page sections -->
             <div class="abstract-shape"></div>
 
         </div>
 
-        <div class="hero-sub-section hero-text-panel-2">
 
-            <div class="sub-section-col">
-                <p>Hi, my name is Marlene Chan. I am a freelance <b>UI and UX Web Designer</b> based in London.</p>
-                <p>I have worked with the following companies:</p>
-                <p>Company 1, Company 2, Company 3 and many more...</p>
+        <!--
+        Text panel displayed in the hero section.
+        Panel displayed at screen size 1200px or below and Hidden above screen size 1200px.
+        The text panel displayed is according to button clicked.
+        -->
+        <div class="hero-sub-section hero-text-panel-2 g-5">
+
+            <div id="home-text-panel" class="sub-section-col home-text-panel">
+                <div home-text-panel-include-html="include/home_text_panel.html"></div>
             </div>
 
-            <div class="sub-section-row g-10">
+            <div id="intro-text-panel" class="sub-section-col intro-text-panel">
+                <div introduction-text-panel-include-html="include/introduction_text_panel.html"></div>
+            </div>
+
+            <div id="resume-text-panel" class="sub-section-col resume-text-panel">
+                <div resume-text-panel-include-html="include/resume_text_panel.html"></div>
+            </div>
+
+            <div id="project-text-panel" class="sub-section-col project-text-panel">
+                <div project-text-panel-include-html="include/project_text_panel.html"></div>
+            </div>
+
+            <div id="contact-text-panel" class="sub-section-col contact-text-panel">
+                <div contact-text-panel-include-html="include/contact_text_panel.html"></div>
+            </div>
+
+
+            <div class="sub-section-row p-0 g-5">
                 <h5 class="purple">SCROLL TO VIEW MORE</h5>
                 <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
             </div>
 
         </div>
 
-    </div>
 
+    </div>
     <!-- End of Hero section -->
 
 
+    <!--
+    =================================================================================
+    PAGE SECTIONS
+    =================================================================================
+    -->
 
-    <!-- INTRODUCTION SECTION --------------------------------------->
-
-    <div id="intro" class="intro section-col slide-left">
-
-        <div class="section-header">
-            <h2>An Introduction</h2>
-        </div>
-
-        <div class="section-row">
-
-            <div class="left-panel">
-                <h3>"Let Me Introduce Myself"</h3>
-                <a href="#" class="button button-left-panel">Back to Top</a>
-            </div>
-
-            <div class="right-panel">
-                <h4 class="mb-0">About Me</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-                <p>Etiam non sem mollis, aliquet leo nec, laoreet odio. Pellentesque tristique, mi a aliquam porta, turpis velit cursus nulla, eget blandit leo risus quis ipsum.</p>
-                <p>Integer tempus enim ut libero consectetur, a tristique lacus ultricies. Duis molestie placerat sollicitudin. Nullam nunc dolor, pretium id augue nec, lobortis pretium nulla. Mauris faucibus sed sapien in tempor.</p><br>
-
-                <a href="#" class="button">View More Details</a>
-                
-            </div>
-
-        </div>
-
+    <!-- HOME PAGE SECTION -->
+    <div id="home-page-section" class="home-page-section">
+        <div home-page-include-html="include/home_page.html"></div>
     </div>
-    <!-- End of Introduction Section -->
 
-
-
-    <!-- RESUME SECTION --------------------------------------------->
-    <div id="resume" class="resume section-col slide-left">
-
-        <div class="section-header">
-            <h2>My Resume</h2>
-        </div>
-
-        <div class="section-row">
-
-            <div class="left-panel">
-                <h3>"I have the Qualifications and Experience for any Job"</h3>
-                <a href="#" class="button button-left-panel">Back to Top</a>
-            </div>
-
-            <div class="right-panel">
-
-                <h4 class="mb-0">Education</h4>
-
-                <h5 class="mb-0">School</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-
-                <h5 class="mb-0">University</h5>
-                <p>Etiam non sem mollis, aliquet leo nec, laoreet odio. Pellentesque tristique, mi a aliquam porta, turpis velit cursus nulla, eget blandit leo risus quis ipsum.</p>
-
-                <h4 class="mb-0 border-top">Work Experience</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-                <p>Etiam non sem mollis, aliquet leo nec, laoreet odio. Pellentesque tristique, mi a aliquam porta, turpis velit cursus nulla, eget blandit leo risus quis ipsum.</p>
-
-                <a href="#" class="button">View More Details</a>
-
-            </div>
-
-        </div>
-
+    <!-- INTRODUCTION PAGE SECTION -->
+    <div id="intro-page-section" class="intro-page-section">
+        <div introduction-page-include-html="include/introduction_page.html"></div>
     </div>
-    <!-- End of Resume Section-->
 
-
-
-    <!-- PROJECTS SECTION ------------------------------------------->
-
-    <div id="projects" class="projects section-col slide-left">
-
-        <div class="section-header">
-            <h2>My Projects</h2>
-        </div>
-
-        <div class="section-row">
-
-            <div class="left-panel">
-                <h3>"Here is Some of my Work"</h3>
-                <a href="#" class="button button-left-panel">Back to Top</a>
-            </div>
-
-            <div class="right-panel">
-
-                <h4 class="mb-0">Project 1</h4>
-                <img src="assets/images/ai-generated-8273245.webp" class="image mt-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-
-                <h4 class="mb-0">Project 2</h4>
-                <img src="assets/images/developer-8829735.webp" class="image mt-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-
-                <h4 class="mb-0">Project 3</h4>
-                <img src="assets/images/program-6944163.webp" class="image mt-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros.</p>
-
-                <a href="#" class="button">View More Details</a>
-
-            </div>
-
-        </div>
-
+    <!-- RESUME PAGE SECTION -->
+    <div id="resume-page-section" class="resume-page-section">
+        <div resume-page-include-html="include/resume_page.html"></div>
     </div>
-    <!-- End of Projects Section -->
 
-
-
-    <!-- CONTACT SECTION -------------------------------------------->
-
-    <div id="contact" class="contact section-col slide-left">
-
-        <div class="section-header">
-            <h2>Contact Me</h2>
-        </div>
-
-        <div class="section-row jc-se mt-4">
-
-            <div class="section-column">
-                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                <p class="ta-c">+ 44 020 9999 9999</p>
-            </div>
-
-            <div class="section-column">
-                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                <p class="ta-c">email@somewhere</p>
-            </div>
-
-            <div class="section-column">
-                <svg class="contact-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128l95.1 0 11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128l58.2 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-68.9 0L325.8 320l58.2 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-68.9 0-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7-95.1 0-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384 32 384c-17.7 0-32-14.3-32-32s14.3-32 32-32l68.9 0 21.3-128L64 192c-17.7 0-32-14.3-32-32s14.3-32 32-32l68.9 0 11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320l95.1 0 21.3-128-95.1 0z"/></svg>
-                <p>LinkedIn</p>
-                <p>Facebook</p>
-            </div>
-
-        </div>
-
-        <a href="#" class="button button-left-panel">Back to Top</a>
+    <!-- PROJECT PAGE SECTION -->
+    <div id="project-page-section" class="project-page-section">
+        <div project-page-include-html="include/project_page.html"></div>
     </div>
-    <!-- End of Contact Section -->
 
+    <!-- CONTACT PAGE SECTION -->
+    <div id="contact-page-section" class="contact-page-section">
+        <div contact-page-include-html="include/contact_page.html"></div>
+    </div>
 
-
-    <!-- PRIVACY POLICY SECTION (Modal) ----------------------------->
-    <!-- This section is not displayed in the main page -->
-
+    <!-- PRIVACY POLICY SECTION (Modal) -->
     <div id="privacy" class="legal">
-        <span onclick="document.getElementById('privacy').style.display='none'" class="close-legal" title="Close Privacy Policy">&times;</span>
-
-        <div class="legal-contents">
-            <h1>Privacy Policy</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros. Etiam non sem mollis, aliquet leo nec, laoreet odio. Pellentesque tristique, mi a aliquam porta, turpis velit cursus nulla, eget blandit leo risus quis ipsum. Integer tempus enim ut libero consectetur, a tristique lacus ultricies. Duis molestie placerat sollicitudin. Nullam nunc dolor, pretium id augue nec, lobortis pretium nulla. Mauris faucibus sed sapien in tempor. Nunc faucibus ex non enim vestibulum, vitae hendrerit nisi dignissim. Fusce dapibus lorem nec metus viverra, vitae finibus mi fringilla. Praesent commodo velit a maximus tincidunt. Nam lacinia vitae nulla non dignissim. Integer ante ipsum, mattis sit amet eleifend quis, feugiat non sapien. Nulla vel justo ac orci sagittis dapibus ut vitae dui. Pellentesque quis nisi magna.</p>
-            <p>In venenatis nisi risus, ac tincidunt lectus eleifend eu. Phasellus condimentum in dolor id viverra. Vestibulum risus orci, dapibus a turpis vitae, pharetra aliquam ex. Morbi vehicula metus erat, eget placerat ex elementum quis. Etiam vestibulum lorem vel tortor lobortis, eu eleifend nisi sagittis. Donec id elit et dui condimentum aliquet et sit amet elit. Ut vulputate, ipsum ut commodo feugiat, quam tellus posuere nunc, nec porttitor nibh urna vitae neque. Donec feugiat molestie lectus, ut posuere dui sagittis a. Duis placerat dui a leo sagittis, quis fringilla lacus eleifend. Aliquam efficitur tincidunt lorem et lobortis. Curabitur non metus sit amet quam blandit tincidunt. Suspendisse aliquam tempus ante. Donec finibus odio nisl. Integer congue ex et est cursus bibendum et a enim.</p>
-            <p>Aliquam quis neque risus. Curabitur rutrum, ante semper rhoncus tincidunt, enim mi tristique elit, at vestibulum purus urna eget nisi. Fusce luctus arcu a nibh interdum ultrices. Sed ac urna aliquam, porttitor sem sed, aliquam eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac vehicula ex. Fusce ac ultrices nisl, vitae finibus orci. Aenean in porta orci.</p>
-            <p>Integer sed accumsan risus. Quisque accumsan nec ante sit amet vulputate. Etiam consequat augue vel ullamcorper maximus. Nulla tincidunt suscipit ullamcorper. Donec quis blandit enim. Curabitur vitae elit a erat malesuada posuere id et ipsum. Sed rutrum fermentum sollicitudin. In malesuada massa nulla, vel euismod metus dignissim vitae. Vivamus ut nunc est. Praesent sit amet iaculis dui, id lobortis urna. Nam ut facilisis orci. Duis tincidunt velit vestibulum massa laoreet scelerisque. Duis massa justo, accumsan ac feugiat sit amet, tempor vel mauris. Curabitur a eros elit. Aliquam condimentum at neque sed venenatis.</p>
-        </div>
-
+        <div privacy-policy-include-html="include/privacy_policy.html"></div>
     </div>
 
-    <script>
-        var modal = document.getElementById('privacy');
-        
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-    <!-- End of Privacy Poicy Section -->
-
-
-
-    <!-- TERMS OF USE SECTION (Modal) ------------------------------->
-    <!-- This section is not displayed in the main page -->
-
+    <!-- TERMS OF ISE SECTION (Modal) -->
     <div id="terms" class="legal">
-        <span onclick="document.getElementById('terms').style.display='none'" class="close-legal" title="Close Terms of Use">&times;</span>
-
-        <div class="legal-contents">
-            <h1>Terms of Use</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tortor eros, aliquet eu dui id, tincidunt sagittis dolor. Donec tristique felis nec consectetur tempor. Vivamus sit amet aliquam magna, sit amet euismod eros. Etiam non sem mollis, aliquet leo nec, laoreet odio. Pellentesque tristique, mi a aliquam porta, turpis velit cursus nulla, eget blandit leo risus quis ipsum. Integer tempus enim ut libero consectetur, a tristique lacus ultricies. Duis molestie placerat sollicitudin. Nullam nunc dolor, pretium id augue nec, lobortis pretium nulla. Mauris faucibus sed sapien in tempor. Nunc faucibus ex non enim vestibulum, vitae hendrerit nisi dignissim. Fusce dapibus lorem nec metus viverra, vitae finibus mi fringilla. Praesent commodo velit a maximus tincidunt. Nam lacinia vitae nulla non dignissim. Integer ante ipsum, mattis sit amet eleifend quis, feugiat non sapien. Nulla vel justo ac orci sagittis dapibus ut vitae dui. Pellentesque quis nisi magna.</p>
-            <p>In venenatis nisi risus, ac tincidunt lectus eleifend eu. Phasellus condimentum in dolor id viverra. Vestibulum risus orci, dapibus a turpis vitae, pharetra aliquam ex. Morbi vehicula metus erat, eget placerat ex elementum quis. Etiam vestibulum lorem vel tortor lobortis, eu eleifend nisi sagittis. Donec id elit et dui condimentum aliquet et sit amet elit. Ut vulputate, ipsum ut commodo feugiat, quam tellus posuere nunc, nec porttitor nibh urna vitae neque. Donec feugiat molestie lectus, ut posuere dui sagittis a. Duis placerat dui a leo sagittis, quis fringilla lacus eleifend. Aliquam efficitur tincidunt lorem et lobortis. Curabitur non metus sit amet quam blandit tincidunt. Suspendisse aliquam tempus ante. Donec finibus odio nisl. Integer congue ex et est cursus bibendum et a enim.</p>
-            <p>Aliquam quis neque risus. Curabitur rutrum, ante semper rhoncus tincidunt, enim mi tristique elit, at vestibulum purus urna eget nisi. Fusce luctus arcu a nibh interdum ultrices. Sed ac urna aliquam, porttitor sem sed, aliquam eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac vehicula ex. Fusce ac ultrices nisl, vitae finibus orci. Aenean in porta orci.</p>
-            <p>Integer sed accumsan risus. Quisque accumsan nec ante sit amet vulputate. Etiam consequat augue vel ullamcorper maximus. Nulla tincidunt suscipit ullamcorper. Donec quis blandit enim. Curabitur vitae elit a erat malesuada posuere id et ipsum. Sed rutrum fermentum sollicitudin. In malesuada massa nulla, vel euismod metus dignissim vitae. Vivamus ut nunc est. Praesent sit amet iaculis dui, id lobortis urna. Nam ut facilisis orci. Duis tincidunt velit vestibulum massa laoreet scelerisque. Duis massa justo, accumsan ac feugiat sit amet, tempor vel mauris. Curabitur a eros elit. Aliquam condimentum at neque sed venenatis.</p>
-        </div>
-
+        <div terms-include-html="include/terms.html"></div>
     </div>
-
-    <script>
-        var modal = document.getElementById('terms');
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>        
-
-
-
+    
     <!-- FOOTER SECTION --------------------------------------------->
-    <!-- Displayed when screen size is 577px and above -->
-    <div id="footer" class="footer section-col slide-left">
-
-        <div class="footer-header">
-            <h2 class="mt-0 mb-0">Marlene Chan</h2>
-            <p>UI and UX Designer</p>
-        </div>
-
-
-
-        <div class="footer-sub-section pt-1">
-
-            <!-- Main page navigation panel -->
-            <div class="footer-panel">
-                <p class="p-bold">Simplicity</p>
-                <a href="#intro" class="nav-footer-link">Introduction</a>
-                <a href="#resume" class="nav-footer-link">Resume</a>
-                <a href="#projects" class="nav-footer-link">My Projects</a>
-                <a href="#contact" class="nav-footer-link">Contact Me</a>
-            </div>
-
-            <!-- Legal page navigation panel -->
-            <div class="footer-panel">
-                <p class="p-bold ml-0">Legal</p>
-                <button class="button-legal" onclick="document.getElementById('privacy').style.display='block'">Privacy Policy</button>
-                <button class="button-legal" onclick="document.getElementById('terms').style.display='block'">Terms of Use</button>
-            </div>
-
-            <!-- Social Media navigation panel -->
-            <div class="footer-panel">
-                <p class="p-bold ml-0">Social Media</p>
-                <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" d="M204.97 197.54h64.69v33.16h.94c9.01-16.16 31.04-33.16 63.89-33.16 68.31 0 80.94 42.51 80.94 97.81v116.92h-67.46l-.01-104.13c0-23.81-.49-54.45-35.08-54.45-35.12 0-40.51 25.91-40.51 52.72v105.86h-67.4V197.54zm-38.23-65.09c0 19.36-15.72 35.08-35.08 35.08-19.37 0-35.09-15.72-35.09-35.08 0-19.37 15.72-35.08 35.09-35.08 19.36 0 35.08 15.71 35.08 35.08zm-70.17 65.09h70.17v214.73H96.57V197.54z"/></svg></a>                    
-                <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>                    
-            </div>
-
-        </div>
-
-        <!-- Bottom of Footer -->
-        <div class="footer-sub-section mb-3">
-            <div class="footer-panel" style="width: 20%;">
-                <p class="p-med ml-0">Telephone: +44 020 0000 0000</p>
-            </div>
-            <div class="footer-panel" style="width: 20%;">
-                <p class="p-med ml-0">&copy Copyright 2025</p>
-            </div>
-            <div class="footer-panel" style="width: 20%;">
-                <p class="p-med ml-0">Email: email@email</p>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <!-- MOBILE "FOOTER" NAVIGATION MENU -->
-    <!-- Displayed when screen size is 576px or below -->
-    <div class="mobile-footer-section">
-
-        <div class="mobile-footer">
-
-            <div class="mobile-footer-logo-section">
-                <h4>Simplicity</h4>
-            </div>
-
-                <div id="mobile-footer-links">
-
-                <button class="mobile-button"><a href="#intro" onclick="closeMobileMenu()">Introduction</a></button><br>
-                <button class="mobile-button"><a href="#resume" onclick="closeMobileMenu()">Resume</a></button><br>
-                <button class="mobile-button"><a href="#projects" onclick="closeMobileMenu()">My Projects</a></button><br>
-                <button class="mobile-button"><a href="#contact" onclick="closeMobileMenu()">Contact Me</a></button><br>
-                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('privacy').style.display='block'">Privacy Policy</button><br>
-                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('terms').style.display='block'">Terms of Use</button>
-
-            </div>
-
-            <a href="javascript:void(0);" class="icon" onclick="activateFooterMenu()"><i class="fa fa-bars"></i></a>
-
-        </div>
-        
-        <div style="padding-left:16px"><p></p></div>
-
-        <div class="mobile-footer-footer">
-            <p class="ta-c">&copy Copyright 2025</p>
-            <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" d="M204.97 197.54h64.69v33.16h.94c9.01-16.16 31.04-33.16 63.89-33.16 68.31 0 80.94 42.51 80.94 97.81v116.92h-67.46l-.01-104.13c0-23.81-.49-54.45-35.08-54.45-35.12 0-40.51 25.91-40.51 52.72v105.86h-67.4V197.54zm-38.23-65.09c0 19.36-15.72 35.08-35.08 35.08-19.37 0-35.09-15.72-35.09-35.08 0-19.37 15.72-35.08 35.09-35.08 19.36 0 35.08 15.71 35.08 35.08zm-70.17 65.09h70.17v214.73H96.57V197.54z"/></svg></a>                    
-            <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>                    
-        </div>
-
-
-
-    </div>
+    <div class="footer-include-section">
+        <div footer-include-html="include/footer.html"></div>
+    <div>
 
 
 
     <!-- Javascript link -->
     <script src="main.js" charset="utf-8"></script>
 
+    <!-- HTML INCLUDE SCRIPT FUNCTIONS -->
+    <script>includeHomeHeroHTML();</script>
+    <script>includeHomeTextPanelHTML();</script>
+    <script>includeHomePageHTML();</script>
+    <script>includeIntroductionHeroHTML();</script>
+    <script>includeIntroductionTextPanelHTML();</script>
+    <script>includeIntroductionPageHTML();</script>
+    <script>includeResumeHeroHTML();</script>
+    <script>includeResumeTextPanelHTML();</script>
+    <script>includeResumePageHTML();</script>
+    <script>includeProjectHeroHTML();</script>
+    <script>includeProjectTextPanelHTML();</script>
+    <script>includeProjectPageHTML();</script>
+    <script>includeContactHeroHTML();</script>
+    <script>includeContactTextPanelHTML();</script>
+    <script>includeContactPageHTML();</script>
+    <script>includePrivacyPolicyHTML();</script>
+    <script>includeTermsHTML();</script>
+    <script>includeFooterHTML();</script>
+
+
 
 </body>
+
+<!-- Image Credits -->
+
+
 </html>

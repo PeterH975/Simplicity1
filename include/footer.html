@@ -1,0 +1,107 @@
+<!-- FOOTER Include Code -->
+
+    <!-- FOOTER SECTION ----------------------------------------->
+    <!-- Displayed when screen size is 577px and above -->
+    <!-- Hidden below screen size 577px -->
+    <!--<div id="footer" class="footer section-col slide-left">-->
+    <div id="footer" class="footer section-col">
+
+        <div class="footer-header">
+            <h2 class="mt-0 mb-0">Marlene Chan</h2>
+            <p>UI and UX Designer</p>
+        </div>
+
+        <div class="footer-sub-section pt-1">
+
+            <!-- Main page navigation panel -->
+            <div class="footer-panel">
+                <p class="pg-b">Quick Links</p>
+                <a href="#" class="nav-footer-link" onclick="displayHome()">Home</a>
+                <a href="#" class="nav-footer-link" onclick="displayIntroduction()">Introduction</a>
+                <a href="#" class="nav-footer-link" onclick="displayResume()">Resume</a>
+                </div>
+
+            <!-- Legal page navigation panel -->
+            <div class="footer-panel">
+                <p class="pg-b ml-0">Legal</p>
+                <button class="button-legal" onclick="displayPrivacy()">Privacy Policy</button>
+                <button class="button-legal" onclick="displayTerms()">Terms of Use</button>
+            </div>
+
+            <!-- Social Media navigation panel -->
+            <div class="footer-panel footer-panel-social-1">
+                <p class="pg-b ml-0">Social Media</p>
+                <div class="footer-panel-social-items">
+                    <a href="" target="_blank"><img class="social-icons" src="assets/images/5282542_linkedin_network_social network_linkedin logo_icon.svg"></a>
+                    <a href="" target="_blank"><img class="social-icons" src="assets/images/5282541_fb_social media_facebook_facebook logo_social network_icon.svg"></a>
+                    <a href="" target="_blank"><img class="social-icons" src="assets/images/11244080_x_twitter_elon musk_twitter new logo_icon.svg"></a>
+                    <a href="" target="_blank"><img class="social-icons" src="assets/images/5305167_call_chat_mobile_whatsapp_whatsapp logo_icon.svg"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom of Footer -->
+        <div class="footer-bottom-section">
+
+            <div class="footer-bottom-panel">
+                <p>&copy Copyright 2025</p>
+            </div>
+            <div class="footer-bottom-panel">
+                <p>Telephone: +44 020 0000 0000</p>
+            </div>
+            <div class="footer-bottom-panel">
+                <p>Email: email@email</p>
+            </div>
+            <div class="footer-panel-social-2">
+                <a href="" target="_blank"><img class="social-icons" src="assets/images/5282542_linkedin_network_social network_linkedin logo_icon.svg"></a>
+                <a href="" target="_blank"><img class="social-icons" src="assets/images/5282541_fb_social media_facebook_facebook logo_social network_icon.svg"></a>
+                <a href="" target="_blank"><img class="social-icons" src="assets/images/11244080_x_twitter_elon musk_twitter new logo_icon.svg"></a>
+                <a href="" target="_blank"><img class="social-icons" src="assets/images/5305167_call_chat_mobile_whatsapp_whatsapp logo_icon.svg"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MOBILE "FOOTER" NAVIGATION MENU ---------------------------->
+    <!-- CURRENTLY NOT IN USE -->
+    <!-- Displayed at screen size 576px or below -->
+    <!-- Hidden above screen size 576px -->
+    <div class="mobile-footer-section">
+
+        <div class="mobile-footer">
+
+            <div class="mobile-footer-logo-section">
+                <h4>Simplicity</h4>
+            </div>
+
+                <div id="mobile-footer-links">
+
+                <button class="mobile-button"><a href="#intro" onclick="closeMobileMenu()">Introduction</a></button><br>
+                <button class="mobile-button"><a href="#resume" onclick="closeMobileMenu()">Resume</a></button><br>
+                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('privacy').style.display='block'">Privacy Policy</button><br>
+                <button class="mobile-legal-button" onclick="closeMobileMenu(); document.getElementById('terms').style.display='block'">Terms of Use</button>
+
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="activateFooterMenu()"><i class="fa fa-bars"></i></a>
+
+        </div>
+        
+        <div style="padding-left:16px"><p></p></div>
+
+        <div class="mobile-footer-footer">
+            <p class="ta-c">&copy Copyright 2025</p>
+            <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" d="M204.97 197.54h64.69v33.16h.94c9.01-16.16 31.04-33.16 63.89-33.16 68.31 0 80.94 42.51 80.94 97.81v116.92h-67.46l-.01-104.13c0-23.81-.49-54.45-35.08-54.45-35.12 0-40.51 25.91-40.51 52.72v105.86h-67.4V197.54zm-38.23-65.09c0 19.36-15.72 35.08-35.08 35.08-19.37 0-35.09-15.72-35.09-35.08 0-19.37 15.72-35.08 35.09-35.08 19.36 0 35.08 15.71 35.08 35.08zm-70.17 65.09h70.17v214.73H96.57V197.54z"/></svg></a>                    
+            <a href="#"><svg class="social-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>                    
+        </div>
+
+    </div>
+    <!-- End of Mobile Footer Menu-->
+
+
+
+
